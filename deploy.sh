@@ -1,0 +1,7 @@
+ZK_CONTRACT_NAME=Media \
+ZK_USDC_ADDRESS="USDC Contract Address" \
+ZK_USDC_DECIMALS=6 \
+ZK_NFT_NAME=Foo \
+ZK_NFT_SYMBOL=Bar \
+ZK_PK="WALLET-PK" \
+yarn deploy

@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+.env.*
+
+# IDE
+/.idea
+
+# builders
+/artifacts
+/cache
+/typechain-types
+/dist
+/contracts
+
+/*.tar
+/*.tar.gz
+
+.deps
+artifacts
