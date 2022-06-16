@@ -15,7 +15,7 @@
 /cache-zk
 /typechain-types
 /dist
-/dev
+/_dev
 /contracts
 
 .deps
