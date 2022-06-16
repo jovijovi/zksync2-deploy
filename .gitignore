@@ -10,13 +10,15 @@
 
 # builders
 /artifacts
+/artifacts-zk
 /cache
+/cache-zk
 /typechain-types
 /dist
+/dev
 /contracts
+
+.deps
 
 /*.tar
 /*.tar.gz
-
-.deps
-artifacts
