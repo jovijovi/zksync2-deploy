@@ -18,7 +18,13 @@ module.exports = {
     zkSyncNetwork: "https://zksync2-testnet.zksync.dev",
     ethNetwork: "goerli",
   },
+  networks: {
+    // To compile with zksolc, this must be the default network.
+    hardhat: {
+      zksync: true,
+    },
+  },
   solidity: {
-    version: "0.8.11",
+    version: "0.8.12",
   },
 };
