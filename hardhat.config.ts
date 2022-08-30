@@ -3,11 +3,12 @@ require("@matterlabs/hardhat-zksync-solc");
 
 module.exports = {
   zksolc: {
-    version: "0.1.0",
+    version: "1.1.5",
     compilerSource: "docker",
     settings: {
       optimizer: {
         enabled: true,
+        runs: 200
       },
       experimental: {
         dockerImage: "matterlabs/zksolc",
