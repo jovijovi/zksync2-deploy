@@ -47,7 +47,10 @@ export default async function (hre: HardhatRuntimeEnvironment) {
 	// await depositHandle.wait();
 
 	// Deploy contract
-	const contract = await deployer.deploy(artifact, args, ZK_USDC_ADDRESS);
+	const contract = await deployer.deploy(artifact, args,
+		{
+			feeToken: ZK_USDC_ADDRESS,
+		});
 
 	// Show the contract address
 	console.log(`${artifact.contractName} was deployed to ${contract.address}`);
