@@ -16,7 +16,6 @@
 /typechain-types
 /dist
 /_dev
-/contracts
 
 .deps
 
