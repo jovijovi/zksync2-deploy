@@ -7,6 +7,8 @@ import {env} from 'process';
 const ZK_CONTRACT_NAME = env.ZK_CONTRACT_NAME;
 const ZK_NFT_NAME = env.ZK_NFT_NAME;
 const ZK_NFT_SYMBOL = env.ZK_NFT_SYMBOL;
+const ZK_NFT_BASE_TOKEN_URI = env.ZK_NFT_BASE_TOKEN_URI;
+const ZK_NFT_MAXSUPPLY = env.ZK_NFT_MAXSUPPLY;
 const ZK_PK = env.ZK_PK;
 
 // deploy contract
@@ -15,6 +17,8 @@ export default async function (hre: HardhatRuntimeEnvironment) {
 	console.log('Contract Name:', ZK_CONTRACT_NAME);
 	console.log('NFT Name:', ZK_NFT_NAME);
 	console.log('NFT Symbol:', ZK_NFT_SYMBOL);
+	console.log('NFT BaseTokenURI:', ZK_NFT_BASE_TOKEN_URI);
+	console.log('NFT MaxSupply:', ZK_NFT_MAXSUPPLY);
 	console.log('PK:', !!ZK_PK);
 
 	// Initialize the wallet
@@ -25,7 +29,13 @@ export default async function (hre: HardhatRuntimeEnvironment) {
 	const artifact = await deployer.loadArtifact(ZK_CONTRACT_NAME);
 
 	// Contract constructor arguments
-	const args = [ZK_NFT_NAME, ZK_NFT_SYMBOL];
+	const getArts = (): any[] => {
+		if (ZK_NFT_BASE_TOKEN_URI && ZK_NFT_MAXSUPPLY) {
+			return [ZK_NFT_NAME, ZK_NFT_SYMBOL, ZK_NFT_BASE_TOKEN_URI, ZK_NFT_MAXSUPPLY, []];
+		}
+		return [ZK_NFT_NAME, ZK_NFT_SYMBOL];
+	}
+	const args = getArts();
 
 	// Estimate fee
 	// Pay fees with ether

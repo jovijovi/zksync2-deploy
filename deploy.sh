@@ -1,5 +1,7 @@
 ZK_CONTRACT_NAME=FooBarNFT \
 ZK_NFT_NAME=Foo \
 ZK_NFT_SYMBOL=Bar \
+ZK_NFT_BASE_TOKEN_URI="https://localhost:2022/nft/" \
+ZK_NFT_MAXSUPPLY=1000 \
 ZK_PK="YOUR_WALLET_PK" \
 yarn deploy
