@@ -5,6 +5,7 @@
   "scripts": {
     "compile": "yarn hardhat compile",
     "deploy": "yarn hardhat deploy-zksync",
+    "flatten": "hardhat flatten ${CONTRACT_SRC} > ${CONTRACT_DST}",
     "remixd": "remixd -s ./contracts --remix-ide https://remix.ethereum.org",
     "clean": "yarn hardhat clean ; rm -rf ./dist/* ; rm -rf ./cache",
     "test": "hardhat test",
