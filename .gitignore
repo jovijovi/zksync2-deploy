@@ -16,6 +16,7 @@
 /typechain-types
 /dist
 /_dev
+/flattened
 
 .deps
 

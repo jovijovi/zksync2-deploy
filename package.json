@@ -1,10 +1,11 @@
 {
   "name": "zksync2-deploy",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": false,
   "scripts": {
     "compile": "yarn hardhat compile",
     "deploy": "yarn hardhat deploy-zksync",
+    "flatten": "hardhat flatten ${CONTRACT_SRC} > ${CONTRACT_DST}",
     "remixd": "remixd -s ./contracts --remix-ide https://remix.ethereum.org",
     "clean": "yarn hardhat clean ; rm -rf ./dist/* ; rm -rf ./cache",
     "test": "hardhat test",
@@ -21,8 +22,8 @@
     "@types/chai-as-promised": "7.1.5",
     "@types/mocha": "9.1.1",
     "@types/node": "18.7.14",
-    "@typescript-eslint/eslint-plugin": "^5.36.0",
-    "@typescript-eslint/parser": "^5.36.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
     "chai": "4.3.6",
     "chai-as-promised": "^7.1.1",
     "eslint": "^8.22.0",
@@ -34,12 +35,12 @@
     "typescript": "4.8.2"
   },
   "dependencies": {
-    "@matterlabs/hardhat-zksync-deploy": "^0.3.6",
-    "@matterlabs/hardhat-zksync-solc": "^0.3.6",
+    "@matterlabs/hardhat-zksync-deploy": "^0.4.0",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.7",
     "@openzeppelin/contracts": "^4.7.3",
     "erc721a": "4.2.2",
     "ethers": "5.7.0",
     "yaml": "^2.1.1",
-    "zksync-web3": "^0.7.13"
+    "zksync-web3": "^0.8.0"
   }
 }
